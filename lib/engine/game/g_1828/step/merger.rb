@@ -331,6 +331,7 @@ module Engine
               choices = merging_corporations.map do |c|
                 "#{c.name} (#{@game.format_currency(c.share_price.price)})"
               end
+              @log << "#{entity.name} chooses which odd share to retain for trading up"
               @player_choice = PlayerChoice.new(step_description: 'Choose share to retain after 2:1 exchange',
                                                 choice_description: 'Choose share',
                                                 choices: choices)
